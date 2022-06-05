@@ -1,0 +1,13 @@
+[Unit]
+Description=gunicorn daemon
+After=network.target
+
+[Service]
+User=jenkins
+Group=www-data
+WorkingDirectory=/home/jenkins/devopsAdmin/student_management
+ExecStart=/home/jenkins/devopsAdmin/myvenv/bin/gunicorn --access-logfile - --workers 3  --bind unix:/home/jenkins/devopsAdmin/student_management/student_management.sock student_management.wsgi:application
+
+
+[Install]
+WantedBy=multi-user.target
