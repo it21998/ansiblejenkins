@@ -1,5 +1,5 @@
 # Prerequisites
-* Installs on local machine that runs the playbooks
+* Installs on gcloud machine that runs the playbooks
 * Ansible install
 ```bash
 sudo apt update
@@ -49,6 +49,14 @@ Links:
 * 9000
 * 5000
 * 8025
+
+#Possible error fixes for ansible-temporary-files
+```bash
+apt install sudo
+sudo apt-get update -y
+sudo apt-get install -y acl
+```
+
 
 # Ready to run playbooks
 ```bash
