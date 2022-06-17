@@ -21,13 +21,12 @@ ansible -m ping all <group-name>
 # Possible tweaking code
 * hosts.yml
 ```yaml
-deploymentservers:
+deploymentjenkins:
   hosts:
-    deploy1:
-      ansible_host: 20.223.241.34 #type yours
-      ansible_port: 22 #type yours
-      ansible_ssh_user: azureuser #type yours
-      #ansible_ssh_private_key_file= ~/.ssh/id_rsa.pub
+    deploy2:
+      ansible_host: 20.254.97.185
+      ansible_port: 22
+      ansible_ssh_user: jenkins  
 ```
 # Run development environment with Vagrant
 * run testing environment
@@ -50,7 +49,7 @@ Links:
 * 5000
 * 8025
 
-#Possible error fixes for ansible-temporary-files
+# Possible error fixes for ansible-temporary-files
 ```bash
 apt install sudo
 sudo apt-get update -y
