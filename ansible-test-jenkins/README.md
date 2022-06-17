@@ -1,4 +1,6 @@
 # Prerequisites
+* To run this project we created a jenkins vm in gcloud to access jenkins 
+* Created public key for gcloud vm -> azurevm connection
 * Installs on gcloud machine that runs the playbooks
 * Ansible install
 ```bash
@@ -28,21 +30,6 @@ deploymentjenkins:
       ansible_port: 22
       ansible_ssh_user: jenkins  
 ```
-# Run development environment with Vagrant
-* run testing environment
-```bash
-vagrant plugin install vagrant-hostmanager
-cd vagrant
-vagrunt up
-vagrant ssh-config >> ~/.ssh/config
-```
-* run a playbook
-```bash
-ansible-playbook -l database playbooks/database.yml
-```
-Links:
-* [Vagrant Quick start](https://learn.hashicorp.com/collections/vagrant/getting-started)
-
 # Open ports on azure
 * 8000
 * 9000
@@ -54,13 +41,4 @@ Links:
 apt install sudo
 sudo apt-get update -y
 sudo apt-get install -y acl
-```
-
-
-# Ready to run playbooks
-```bash
-ansible-playbook playbooks/postgres.yml
-ansible-playbook playbooks/django-project-install.yml
-ansible-playbook playbooks/django2-install.yml
-ansible-playbook playbooks/mailhog.yml
 ```
