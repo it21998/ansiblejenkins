@@ -42,3 +42,10 @@ apt install sudo
 sudo apt-get update -y
 sudo apt-get install -y acl
 ```
+
+# Access
+```bash
+http://20.254.97.185:8000/    #admin
+http://20.254.97.185:9000/    #system
+http://20.254.97.185:8025/    #mailhog
+```
